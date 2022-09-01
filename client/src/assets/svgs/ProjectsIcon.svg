@@ -1,0 +1,7 @@
+<svg id="e3O5sKmaPQY1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
+    <!-- <ellipse rx="128" ry="128" transform="translate(150 150)" fill="none" stroke="#000" strokeWidth="4"/> -->
+    <g transform="translate(0 10)">
+        <rect width="60" height="40" rx="20" ry="20" transform="translate(120 70)" fill="#6b00d7" stroke="#000" strokeWidth="20"/>
+        <rect width="180" height="120" rx="20" ry="20" transform="translate(60 90)" fill="#6b00d7" strokeWidth="0"/>
+    </g>
+</svg>
