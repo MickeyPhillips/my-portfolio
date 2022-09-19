@@ -61,18 +61,18 @@ const Projects = (props) => {
     }
     let projectList = [
         {
-            title: "Project 1",
-            img: "https://coreui.io/react/docs/static/react-83088efde08a5dedde9f67a954cb4b5b.jpg",
-            github: "githublink",
-            live: "livelink",
-            techs: ["React", "Node", "React-Three-Fiber"]
+            title: "S(IO)NG",
+            img: "./assets/images/Sing-Song-Webnail.png",
+            github: "https://github.com/MickeyPhillips/sing-song",
+            live: "https://thunderous-gelato-ead3d7.netlify.app/",
+            techs: ["React", "Three.js", "react-three/fiber", "react-three/drei", "Bootstrap", "Node.js", "Express.js", "Spotify API"]
         },
         {
-            title: "Project 2",
-            img: "https://coreui.io/react/docs/static/vue-8a74d93fde1a02c247304291cce46797.jpg",
+            title: "Portfolio Website",
+            img: "./assets/images/portfolio_picture.png",
             github: "githublink",
-            live: "livelink",
-            techs: ["React", "Graphql", "Rust"]
+            live: "https://mickeyphillips.info/",
+            techs: ["React", "Chart.js", "Three.js", "react-three/fiber", "react-three/drei"]
         }
     
     ]
@@ -145,14 +145,23 @@ const Projects = (props) => {
 
                                         <img src={slide.img} style={props.size.height > 550 ? largeStyles.image : largeStyles.imageTablet}/>
                                         <div style={styles.bottomRight}>
-                                            <FaGithub style={styles.link}/>
-                                            <FaLink style={styles.link}/>
+                                            <a href={slide.github} style={{textDecoration: "none", color:"white"}} target="_blank"><FaGithub style={styles.link}/></a>
+                                            <a href={slide.live} style={{textDecoration: "none", color:"white"}} target="_blank"><FaLink style={styles.link}/></a>
+                                            
                                         </div>
                                         
                                     </div>
                                     
-                                    <p>{slide.techs.map((tech, i, arr) =>
-                                        <span>{tech} </span>
+                                    <p>{slide.techs.map((tech, i, arr) => {
+                                        if(arr.length - 1 === i) {
+                                            return(<span>{tech}</span>)
+                                        }
+                                        else {
+                                            return (<span>{tech} | </span>)
+                                        }
+                                    }
+                                        
+                                        
                                     )}</p>
                                     
                                 </div>
@@ -209,8 +218,15 @@ const Projects = (props) => {
                                         
                                     </div>
                                     
-                                    <p>{slide.techs.map((tech, i, arr) =>
-                                        <span>{tech} </span>
+                                    <p>{slide.techs.map((tech, i, arr) => {
+                                        if(arr.length - 1 === i) {
+                                            return(<span>{tech}</span>)
+                                        }
+                                        else {
+                                            return (<span>{tech} | </span>)
+                                        }
+                                    }
+                                        
                                     )}</p>
                                     
                                 </div>

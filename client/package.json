@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MickeyPhillips.github.io/production_portfolio",
+  
   "dependencies": {
     "@react-three/drei": "^9.23.5",
     "@react-three/fiber": "^8.6.0",

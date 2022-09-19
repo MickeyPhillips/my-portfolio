@@ -39,7 +39,7 @@ export default function App() {
       <Canvas 
       // camera={{ fov: 45, position: [2, 2, -4] }}
       
-      camera={size.width > 800 ? { fov: 45, position: [3, 1.5, 4]} : { fov: 45, position: [2, 2, -4] }}
+      camera={size.width > 800 ? { fov: 45, position: [3, 1.5, 4]} : { fov: 45, position: [2, 1, -4] }}
       >
       
         <Suspense fallback={null}>
@@ -53,7 +53,7 @@ export default function App() {
           <Mouse scale={1} position={[-.52,.20,.69]} rotation={[0, -Math.PI / 1.1, 0]}/>
           <ambientLight intensity={0.5} />
           <pointLight color="white" intensity={1.5} position={[10, 10, 10]} />
-          {size.width > 800 ? (
+          
             <OrbitControls 
             minDistance={3.15} 
             maxDistance={3.15}
@@ -61,21 +61,8 @@ export default function App() {
             enablePan={false} 
             enableZoom={false}
             // autoRotate={true}
-            
-            />
-          ) :
-          (
-            <OrbitControls 
-            minDistance={3.15} 
-            maxDistance={7}
-            
-            enablePan={false} 
-            // enableZoom={false}
-            // autoRotate={true}
-            
-            />
-          )
-          }
+        
+          />
           
           
           {/* <Stats /> */}
